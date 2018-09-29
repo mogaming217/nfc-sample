@@ -22,6 +22,7 @@
 		C1FFAC3D215FB38300362750 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		C1FFAC40215FB38300362750 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		C1FFAC42215FB38300362750 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		C1FFAC48215FB49E00362750 /* nfc-sample.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "nfc-sample.entitlements"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,6 +55,7 @@
 		C1FFAC35215FB38100362750 /* nfc-sample */ = {
 			isa = PBXGroup;
 			children = (
+				C1FFAC48215FB49E00362750 /* nfc-sample.entitlements */,
 				C1FFAC36215FB38100362750 /* AppDelegate.swift */,
 				C1FFAC38215FB38100362750 /* ViewController.swift */,
 				C1FFAC3A215FB38100362750 /* Main.storyboard */,
@@ -96,6 +98,11 @@
 				TargetAttributes = {
 					C1FFAC32215FB38100362750 = {
 						CreatedOnToolsVersion = 10.0;
+						SystemCapabilities = {
+							com.apple.NearFieldCommunicationTagReading = {
+								enabled = 1;
+							};
+						};
 					};
 				};
 			};
@@ -282,6 +289,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = "nfc-sample/nfc-sample.entitlements";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 2G9R22Q49T;
 				INFOPLIST_FILE = "nfc-sample/Info.plist";
@@ -300,6 +308,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = "nfc-sample/nfc-sample.entitlements";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 2G9R22Q49T;
 				INFOPLIST_FILE = "nfc-sample/Info.plist";
